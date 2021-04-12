@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.optionsmenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://i.pinimg.com/236x/c1/11/f0/c111f0607acdacca9f9adc1187661a8d.jpg);
+    background-size: cover;
+    width: 50%;
+}
+
+.optionsmenu input {
+    background-color: rgb(200, 200, 200);
+    margin: 10px 500px 10px 0px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-family: sans-serif;
+    width: 200px;
+    height: 50px;
+}
+
+.optionsmenu img {
+    height: 300px;
+    margin-bottom: 50px;
+}

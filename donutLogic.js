@@ -62,7 +62,7 @@ function placeOrder() {
 	while (ordering){
 		let currentTypes = [];
 		let number = 0;
-		inventory.forEach(element => {number++; currentTypes.push(number + ")." + element.type + "\n")}); // print the current donut types
+		inventory.forEach(element => {number++; currentTypes.push(number + "). " + element.type + "\n")}); // print the current donut types
 		let addType = prompt("Which type would you like to order? \n" + currentTypes.join(''), ''); // display the line items to the user and gather input
 		let quantity = prompt("How many?", ''); // gather a quantity
 		if (inventory[addType-1].quantity - Number(quantity) < 0){
@@ -81,7 +81,7 @@ function placeOrder() {
 function getRefund() {
 	let currentTypes = [];
 	let number = 0;
-	inventory.forEach(element => {number++; currentTypes.push(number + ")." + element.type + "\n")}); // construct a list of the current donuts
+	inventory.forEach(element => {number++; currentTypes.push(number + "). " + element.type + "\n")}); // construct a list of the current donuts
 	let addType = prompt("Which type would you like to refund? \n" + currentTypes.join(''), ''); // display the line items to the user and gather input
 	let quantity = prompt("How many?", ''); // gather a quantity
 	revenue = revenue - inventory[addType-1].price*quantity;
@@ -90,7 +90,7 @@ function getRefund() {
 function changeDonutPrice() {
 	let currentTypes = [];
 	let number = 0;
-	inventory.forEach(element => {number++; currentTypes.push(number + ")." + element.type + "\n")}); // print the current donut types
+	inventory.forEach(element => {number++; currentTypes.push(number + "). " + element.type + "\n")}); // print the current donut types
 	let addType = prompt("Which type would you like to change the price of? \n" + currentTypes.join(''), ''); // display the line items to the user and gather input
 	let price = prompt(inventory[addType-1].type + " donuts cost $" + inventory[addType-1].price.toFixed(2) + ", what should it change to?", ''); // gather a new price
 	inventory[addType-1].price = Number(price);

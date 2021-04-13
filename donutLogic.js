@@ -1,5 +1,4 @@
 var revenue = 0;
-var programRunning = true;
 
 class donutType {
 	type;
@@ -94,46 +93,4 @@ function changeDonutPrice() {
 	let addType = prompt("Which type would you like to change the price of? \n" + currentTypes.join(''), ''); // display the line items to the user and gather input
 	let price = prompt(inventory[addType-1].type + " donuts cost $" + inventory[addType-1].price.toFixed(2) + ", what should it change to?", ''); // gather a new price
 	inventory[addType-1].price = Number(price);
-}
-
-function mainMenu() {
-	var input = prompt("What would you like to do? \n" +
-			   "1. Print out the inventory \n" +
-			   "2. Print out the total revenue \n" +
-			   "3. Create a new donut type \n" +
-			   "4. Add donuts to the inventory \n" +
-			   "5. Place customer orders \n" +
-			   "6. Get a refund \n" +
-			   "7. Change donut price \n" +
-			   "8. Quit the program", "");
-	if (input === null){
-		return programRunning = false;
-	}
-	switch(input){
-		case "1":
-			printInventory();
-			break;
-		case "2":
-			totalRevenue();
-			break;
-		case "3":
-			newDonut();
-			break;
-		case "4":
-			addInventory();
-			break;
-		case "5":
-			placeOrder();
-			break;
-		case "6":
-			getRefund();
-			break;
-		case "7":
-			changeDonutPrice();
-			break;
-		case "8":
-			return programRunning = false;
-		default: 
-			console.log(alert("Invalid Input"));
-	}
 }

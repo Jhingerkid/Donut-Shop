@@ -19,15 +19,6 @@ var inventory = [
 	new donutType('Apple', 10, 3)
 ]
 
-function main() {
-	while (programRunning){
-		mainMenu();
-		if (programRunning === false){
-			return;
-		}
-	}
-}
-
 function printInventory() {
 	let invReport = [];
 	// make line items out of each object in the inventory
